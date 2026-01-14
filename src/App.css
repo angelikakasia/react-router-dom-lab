@@ -1,4 +1,4 @@
-/* ========== GLOBAL RESET / BASE ========== */
+/* ===== BASE ===== */
 
 * {
   box-sizing: border-box;
@@ -6,30 +6,26 @@
 
 body {
   margin: 0;
-  padding: 24px;
-  min-height: 100vh;
   background-color: #0f1117;
   color: #e6e6eb;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 #root {
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 32px;
 }
 
-/* ========== NAV BAR ========== */
+/* ===== NAV ===== */
 
 nav {
   margin-bottom: 32px;
 }
 
 ul {
+  list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
   gap: 20px;
-  list-style: none;
 }
 
 a {
@@ -42,21 +38,38 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ========== HEADINGS ========== */
+/* ===== PAGE CARD ===== */
 
-h1,
-h2,
-h3 {
-  margin-bottom: 16px;
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: #161926;
+  border: 1px solid #2a2d3a;
+  border-radius: 12px;
+  padding: 32px;
 }
 
-/* ========== FORMS ========== */
+/* ===== HEADINGS ===== */
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 12px;
+}
+
+/* ===== FORMS ===== */
 
 form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 500px;
 }
 
 label {
@@ -78,18 +91,19 @@ textarea {
 
 textarea {
   min-height: 100px;
-  resize: vertical;
 }
 
+/* ===== BUTTON ===== */
+
 button {
-  margin-top: 12px;
-  padding: 12px;
+  margin-top: 16px;
+  align-self: flex-start;
+  padding: 10px 24px;
   border-radius: 6px;
   border: none;
-  font-size: 1rem;
-  font-weight: 600;
   background-color: #5b6cff;
   color: white;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -97,44 +111,12 @@ button:hover {
   background-color: #6c7bff;
 }
 
-/* ========== MAILBOX LIST ========== */
+/* ===== MAILBOX ===== */
 
 .mail-box {
   border: 1px solid #2a2d3a;
   border-radius: 8px;
-  padding: 20px;
-  margin: 16px 0;
-  text-align: center;
-  background-color: #161926;
-}
-
-.mail-box h3 {
-  margin: 0;
-}
-
-/* ========== LETTERS ========== */
-
-.letter {
-  border: 1px solid #2a2d3a;
-  border-radius: 8px;
   padding: 16px;
-  margin: 12px 0;
-  background-color: #161926;
-}
-
-.letter p {
-  margin: 6px 0;
-}
-
-/* ========== SMALL SCREENS ========== */
-
-@media (max-width: 600px) {
-  ul {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  form {
-    width: 100%;
-  }
+  margin-bottom: 12px;
+  background-color: #1a1d29;
 }

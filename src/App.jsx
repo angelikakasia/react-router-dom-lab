@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
-
+import './App.css'
 import NavBar from './components/NavBar'
 import MailboxList from './pages/MailboxList'
 import MailboxDetails from './pages/MailboxDetails'
