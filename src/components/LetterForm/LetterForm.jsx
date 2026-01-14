@@ -24,46 +24,48 @@ const LetterForm = ({ mailboxes, addLetter }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Mailbox:
-        <select
-          name="mailboxId"
-          value={formData.mailboxId}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select a mailbox</option>
-          {mailboxes.map((box) => (
-            <option key={box._id} value={box._id}>
-              Mailbox {box._id}
-            </option>
-          ))}
-        </select>
-      </label>
+    <div className="form-card">
+      <form onSubmit={handleSubmit}>
+        <label>
+          Mailbox:
+          <select
+            name="mailboxId"
+            value={formData.mailboxId}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select a mailbox</option>
+            {mailboxes.map((box) => (
+              <option key={box._id} value={box._id}>
+                Mailbox {box._id}
+              </option>
+            ))}
+          </select>
+        </label>
 
-      <label>
-        Recipient:
-        <input
-          name="recipient"
-          value={formData.recipient}
-          onChange={handleChange}
-          required
-        />
-      </label>
+        <label>
+          Recipient:
+          <input
+            name="recipient"
+            value={formData.recipient}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
-      <label>
-        Message:
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-      </label>
+        <label>
+          Message:
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
-      <button type="submit">Send Letter</button>
-    </form>
+        <button type="submit">Send Letter</button>
+      </form>
+    </div>
   )
 }
 
